@@ -1,0 +1,22 @@
+body {
+	background-color: #000000
+}
+
+h1{ 
+	color: #ffffff
+}
+
+.legend{
+	position: fixed;
+	left: 10px;
+	top: 100px;
+}
+
+rect.bar {
+	fill: steelblue;
+	shape-rendering: crispEdges;
+}
+
+.graph{
+	z-index: 100
+}
