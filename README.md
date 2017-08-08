@@ -8,7 +8,7 @@
 
 <p align="center"> <i> Maptime, time for making maps! </i></p>
 
-The team from [Webmapper](http://www.webmapper.nl "What the map can be") developed this workshop in the context of [Maptime](maptime.io) to share their hands-on experience in web cartography and geographic web application development.
+The team from [Webmapper](http://www.webmapper.nl "What the map can be") developed this workshop in the context of [Maptime](http://maptime.io) to share their hands-on experience in web cartography and geographic web application development.
 
 <p align="center"> <img align="center" src="https://raw.githubusercontent.com/wiki/NieneB/Webmapping_for_beginners/img/webmapper_logo_tekst.png" alt="webmapper"> </p>
 
