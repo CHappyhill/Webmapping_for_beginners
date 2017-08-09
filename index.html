@@ -18,62 +18,132 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-			<!-- Opening & Introduction -->
-			<section>
-				<section data-state='openingslide' data-background="https://www.mapbox.com/help/img/screenshots/dynamic-ny-details.gif">
-					<h1>Webmapping for beginners</h1>
-					<h2>Making Maps with JavaScript </h2>
-					<h2>By Niene Boeijen</h2>
-				</section>
+				<!-- Opening & Welcome -->
 				<section>
-					<h1>About me </h1>
-					<div style="float:left; width:50%;"> 
-						<a href="http://webmapper.net"><img src="https://raw.githubusercontent.com/wiki/NieneB/Webmapping_for_beginners/img/webmapper_logo_tekst.png" height="120px"> </a>
-						<a href="http://maptime.io"><img src="img/maptimeAMS.png" height="200px"></a>
-						<a href="https://waag.org/en/users/niene-boeijen"><img src="img/WS_logo.jpg" height="100px"></a>
-						<img src="img/wur.jpg" width="250px">
-					</div>
-					<div style="float:right; width: 50%;">
-						<p>Web Cartographer & Geo ICT developer</p>
-						<p>Maptime Amsterdam & Utrecht</p>
-						<p>Internship</p>
-						<p>Msc Geo Information Science & Remote Sensing</p>
-					</div>
-				</section>
-				<section>
-					<a href="http://webmapper.net"><img src="https://raw.githubusercontent.com/wiki/NieneB/Webmapping_for_beginners/img/webmapper_logo_tekst.png" height="150px"></a>
-					<blockquote> <i><p>What the map can be</p>
-					<p>Wij maken interactieve kaarten en datavisualisaties. Onze expertise is open {source; data; standaarden}. Onze kracht is het combineren van cartografie en webtechnologie.</p></i></blockquote>
-					<p>Utrecht, The Netherlands</p>
-				</section>
-			</section>
-			<!--Technical info -->
-				<section>
+					<section data-background="img/boston.gif">
+						<h1>Webmapping for beginners</h1>
+						<h2>Making Maps with JavaScript </h2>
+						<h3>By Niene Boeijen</h3>
+					</section>
+					<!-- Before we can start! -->
 					<section>
-						<h1>Today</h1>
-						<ol>
-							<li>Presentation - 30 min</li>
-							<li>Workshop - 120 min</li>
-							<li>Show & Tell - 30 min</li>
-						</ol>
-						<i><p>Workshop made for <a href="http://2017.foss4g.org/">Foss4G Boston</a>, Aug 2017</p>
-						<p>Feedback? Please! </p></i>
+						<img src="https://media.giphy.com/media/ihwuNjpbb2RBS/giphy.gif" width="400px">
+						<table>
+							<tr>
+								<td> <h3>WIFI</h3> </td>
+								<td> <p>Pssword</p> </td>
+							</tr>
+						</table>
 					</section>
 					<section>
-						<h3>WIFI</h3>
-						<p>Pssword</p>
-					</section>
-					<section> 
-						<h3>This presentation</h3>
-						<h1 style=" text-transform: initial"><a href=""></a></h1>
-						<a href="https://NieneB.github.io/Webmapping_for_beginners/">https://NieneB.github.io/Webmapping_for_beginners/</a>
-						<p>The workshop:</p>
-						<a href="https://github.com/NieneB/Webmapping_for_beginners/wiki">https://github.com/NieneB/Webmapping_for_beginners/wiki</a>
+						<table>
+							<tr>
+								<td> <h4> Presentation </h4> </td>
+								<td> <a href="http://bit.ly/2uF2IhL">http://bit.ly/2uF2IhL </a> </td>
+							</tr>
+							<tr>
+								<td> <h4> Workshop </h4> </td>
+								<td><a href="http://bit.ly/2viXRGF">http://bit.ly/2viXRGF</a></td>
+							</tr>
+						</table>
+						<h4> or </h4>
+						<h4><a  style=" text-transform: initial" href="https://github.com/NieneB/Webmapping_for_beginners">github.com/NieneB/webmapping_for_beginners</a></h4>
 					</section>
 				</section>
-
-			<!-- Presentation part 1 What is a Web Map? -->
-				<section >
+				<!-- All about me me me ! -->
+				<section>
+					<section>
+						<h1>Welcome!</h1>
+						<img src="img/rectangle_color_150_350.png">
+						<i><p>Workshop made for <a href="http://2017.foss4g.org/">Foss4G Boston</a>, Aug 2017</p></i>
+					</section>
+					<section>
+						<h1>Niene Boeijen </h1>
+						<div style="float:left; width:50%;"> 
+							<a href="http://webmapper.net"><img src="https://raw.githubusercontent.com/wiki/NieneB/Webmapping_for_beginners/img/webmapper_logo_tekst.png" height="120px"> </a>
+							<a href="http://maptime.io"><img src="img/maptimeAMS.png" height="200px"></a>
+							<a href="https://waag.org/en/users/niene-boeijen"><img src="img/WS_logo.jpg" height="100px"></a>
+							<img src="img/wur.jpg" width="250px">
+						</div>
+						<div style="float:right; width: 50%;">
+							<p>Web Cartographer & Geo ICT developer</p>
+							<p>Maptime Amsterdam & Utrecht</p>
+							<p>Internship Geo Web Visualization</p>
+							<p>Msc Geo Information Science & Remote Sensing</p>
+						</div>
+					</section>
+					<section data-background="img/webmapper.gif">
+						<div style="float: right; width: 70%; background-color:rgba(255,255,255,0.8);"> 
+							<a href="http://webmapper.net"><img src="https://raw.githubusercontent.com/wiki/NieneB/Webmapping_for_beginners/img/webmapper_logo_tekst.png" height="100px"></a>
+								<i>
+									<p>What the map can be</p>
+									<p>We make interactive maps and visualizations.</p>
+									<p>Our expertise is open {source; data; standards} </p>
+									<p>Our power lies in combining cartography with web technology.</p>
+								</i>
+								<p>Utrecht, The Netherlands</p>
+						</div>
+					</section>
+					<section data-background=img/maptime_chapters.png data-background-size=100%>
+						<h1>Maptime</h1>
+						<p>Time for making maps!</p>
+						<div style="float: right; width: 40%;" >
+						<img class="fragment fade-in"  src="https://secure.meetupstatic.com/photos/event/9/1/0/0/highres_459997120.jpeg">
+						</div>
+						<div style="float: left; width: 60%;" >
+						<img class="fragment fade-in"  src="https://secure.meetupstatic.com/photos/event/c/5/b/2/highres_458930610.jpeg">
+						</div>
+					</section>
+					<section>
+						<h1> Let's get started!</h1>
+					</section>
+				</section>
+					<!--Programme info -->
+				<section>
+					<section>
+						<h1>Goal of today!</h1>
+						<p> At the end of this workshop, you will have <b>your own web page with an interactive map!</b> Including custom data and different background maps, of the area you want to show! Your web page will be hosted on Github, so you can <b>immediately share your progress with all your family and friends!</b></p>
+						<img src="https://media.giphy.com/media/6KKab1ydLq1uU/giphy.gif">
+					</section>
+					<section>
+						<h1> Beginners</h1>
+						<img src="https://media.giphy.com/media/AEcZfXZZNCcQU/giphy.gif" width="250px">
+						<p>For beginners means: if you have NO knowledge of JavaScript, HTML, CSS, Leaflet.js and D3.js, this workshop will help you get started!</p>
+					</section>
+					<section>
+					<h1>This is how we do it:</h1>
+						<table>
+							<tr>
+								<td>Introduction</td> 
+								<td>15 min </td>
+							</tr>
+							<tr>
+								<td>Leaflet.js</td> 
+								<td>15 min </td>
+							</tr>
+							<tr>
+								<td> <a href="https://github.com/NieneB/Webmapping_for_beginners/wiki/Introduction-Leaflet">Workshop Leaflet.js </a></td> 
+								<td> 60 min</td>
+							</tr>
+							<tr> 
+								<td colspan="2" align="center"> <b> Break!</b></td>
+							</tr>
+							<tr> 
+								<td> D3.js</td>
+								<td>15 min</td>
+							</tr>
+							<tr>
+								<td><a href="https://github.com/NieneB/Webmapping_for_beginners/wiki/Introduction-D3">Workshop D3.js</a></td>
+								<td>60 min</td>
+							</tr>
+							<tr> 
+								<td colspan="2" align="center"><b>Show & tell</b> </td>
+							</tr>
+						</table>
+					</section>
+				</section>
+				<!-- Presentation part 1 What is a Web Map? -->
+				<section>
 					<section>
 						<h1>What is a web map?</h1>
 						<p>Analogue paper - Digital maps - Web Maps</p>
@@ -157,16 +227,17 @@
 							<p>Tiles</p>
 							<p>Layers</p>
 							<p>Servers</p>
-						
 					</section>
 					<section>
 						<img src="img/anatomy-of-a-web-map.png">
 					</section>
-					<section><h2>How to bring this all together?</h2></section>
+					<section><h2>How to bring this all together?</h2>
+					</section>
 				</section>
 				<!-- Presentation part 2 JavaScript -->
 				<section>
-				<section> <h1>Maps with JavaScript</h1></section>
+					<section> <h1>Maps with JavaScript</h1>
+					</section>
 					<section data-background-image="img/html_demo.gif" data-background-size="60%" >
 						<h1>How to make a Web Page?</h1>
 						<p>HTML - Content</p>
@@ -177,6 +248,7 @@
 						<h1>Want to learn more?</h1>
 						<p><a href="https://github.com/NieneB/Webmapping_for_beginners/wiki/Making-a-web-page">Making a web page</a> introduction</p>
 						<p><a href="https://www.codecademy.com/learn/web"> Code Academy HTML & CSS</a></p>
+						<img src="https://media.giphy.com/media/yYSSBtDgbbRzq/giphy.gif">
 					</section>
 					<section>
 						<h1>Maps with JavaScript</h1>
@@ -193,7 +265,7 @@
 						<p>Google Maps</p>
 						<p>HERE Maps</p>
 					</section>
-				<!-- NL Maps -->
+					<!-- NL Maps -->
 					<!-- <section>
 						<h1>NL Maps</h1>
 						<p>Nederlandse actuele Data op de kaart (BRT)</p>
@@ -205,8 +277,9 @@
 						<a href="https://nlmaps.nl/"> NL Maps Wizard</a>
 						<img src="img/nl_maps.gif">
 					</section> -->
+					</section>
 				</section>
-				<!-- Leaflet.js -->
+				<!-- Presentation part 3 Leaflet.js -->
 				<section>
 					<section>
 						<h1>Leaflet.js</h1>
@@ -236,7 +309,7 @@
 						<p>Add custom data</p>
 					</section>
 				</section>
-				<!-- D3.js -->
+				<!-- Presentation part 4 D3.js -->
 				<section>
 					<section>
 						<h1>D3.js</h1>
@@ -272,7 +345,7 @@
 						<p>Adding legends and graphs based on the same data</p>
 					</section>
 				</section>
-			<!-- Presentation part 3 Let's get started! -->
+				<!-- Presentation part 5 Let's get started! -->
 				<section>
 					<section>
 						<h1> Let's get started!</h1>
@@ -288,7 +361,6 @@
 						<a href="https://github.com/NieneB/Webmapping_for_beginners/wiki">https://github.com/NieneB/Webmapping_for_beginners/wiki</a>
 					</section>
 				</section>
-
 			</div>
 		</div>
 		<script src="lib/js/head.min.js"></script>
