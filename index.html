@@ -94,9 +94,6 @@
 						<img class="fragment fade-in"  src="https://secure.meetupstatic.com/photos/event/c/5/b/2/highres_458930610.jpeg">
 						</div>
 					</section>
-					<section>
-						<h1> Let's get started!</h1>
-					</section>
 				</section>
 					<!--Programme info -->
 				<section>
@@ -140,6 +137,9 @@
 								<td colspan="2" align="center"><b>Show & tell</b> </td>
 							</tr>
 						</table>
+					</section>
+					<section>
+						<h1> Let's get started!</h1>
 					</section>
 				</section>
 				<!-- Presentation part 1 What is a Web Map? -->
@@ -231,39 +231,52 @@
 					<section>
 						<img src="img/anatomy-of-a-web-map.png">
 					</section>
-					<section><h2>How to bring this all together?</h2>
+					<section>
+						<h2>How to bring this all together?</h2>
+						<h1 class="fragment fade-in"> JavaScript!</h1>
 					</section>
 				</section>
-				<!-- Presentation part 2 JavaScript -->
+				<!-- Presentation part 2 Web page -->
 				<section>
-					<section> <h1>Maps with JavaScript</h1>
-					</section>
-					<section data-background-image="img/html_demo.gif" data-background-size="60%" >
-						<h1>How to make a Web Page?</h1>
-						<p>HTML - Content</p>
-						<p>CSS - Layout</p>
-						<p>JavaScript - Functionality</p>
+					<section >
+						<h1>Making a Web Page</h1>
+						<img src="img/html-css-js.png">
+						<img class="fragment fade-in" src="img/html-css-js-file.png">
 					</section>
 					<section>
-						<h1>Want to learn more?</h1>
-						<p><a href="https://github.com/NieneB/Webmapping_for_beginners/wiki/Making-a-web-page">Making a web page</a> introduction</p>
-						<p><a href="https://www.codecademy.com/learn/web"> Code Academy HTML & CSS</a></p>
-						<img src="https://media.giphy.com/media/yYSSBtDgbbRzq/giphy.gif">
+						<h1>New to HTML & CSS?</h1>
+						<p>Start with <a href="https://github.com/NieneB/Webmapping_for_beginners/wiki/Making-a-web-page">Making a web page</a> </p>
+						<p>Or use <a href="https://www.codecademy.com/learn/web"> Code Academy</a></p>
+						<img src="img/html_demo.gif" width="50%">
 					</section>
 					<section>
 						<h1>Maps with JavaScript</h1>
+					</section>
+				</section>
+				<!-- Presentation part 2.5 Maps with Javascript -->
+				<section>
+					<section>
+						<h1>a Map is a lot! </h1>
 						<p>Data + style = map tiles / Background map</p>
 						<p>Data layers, polygons, lines & points</p>
 						<p>Functionality: zoom, pan, popups, markers, routes, etc. </p>
-						<h2>JavaScript Libraries! </h2>
+						<p>Interactivity</p>
+						<p>etc.</p>
+						<h2 class="fragment fade-in" >JavaScript Libraries! </h2>
+					</section>
+					<section>
+						<h1>JavaScript Library</h1>
+						<p> Including a JavaScript library in your code is like copying and pasting someone else's code into yours. You have access to everything in that library. </p>
+						<p> In our case, it's a bunch of cool tools to make web maps and give them familiar functionality.</p>
 					</section>
 					<section>
 						<h1>JavaScript Libraries for Mapping</h1>
-						<p class="fragment grow">Leaflet.js</p>
-						<p>OpenLayers</p>
-						<p class="fragment grow">D3.js</p>
-						<p>Google Maps</p>
-						<p>HERE Maps</p>
+						<p><a href="https://openlayers.org/">OpenLayers</a>
+						<p class="fragment grow"><a href="http://leafletjs.com/">Leaflet.js</a></p>
+						<p class="fragment grow"><a href="https://d3js.org/">D3.js</a></p>
+						<p><a href="https://developers.google.com/maps/documentation/javascript/">Google Maps</a></p>
+						<p><a href="https://www.mapbox.com/mapbox.js/api/v3.1.1/">Mapbox</a></p>
+						<p><a href="https://developer.here.com/develop/javascript-api">HERE Maps</a></p>
 					</section>
 					<!-- NL Maps -->
 					<!-- <section>
@@ -277,38 +290,109 @@
 						<a href="https://nlmaps.nl/"> NL Maps Wizard</a>
 						<img src="img/nl_maps.gif">
 					</section> -->
-					</section>
 				</section>
 				<!-- Presentation part 3 Leaflet.js -->
 				<section>
 					<section>
 						<h1>Leaflet.js</h1>
-						<img src="img/leaflet-logo.png">
+						<a href="http://leafletjs.com"><img src="img/leaflet-logo.png"></a>
 						<p>An Open-Source JavaScript Library for Mobile-Friendly Interactive Maps</p>
-						<code></code>
+						<blockquote> simplicity, performance and usability </blockquote>
 					</section>
 					<section>
-						<p><a href="http://agafonkin.com/en/">Vladimir Agafonkin</a></p>
-						<p>Lightweight, simple, flexible</p>
-						<p><a href="http://leafletjs.com/plugins.html">Plugins</a></p>
+						<p>Developed by: <a href="http://agafonkin.com/en/">Vladimir Agafonkin.</a></p>
+						<p>Weighing about 38 KB of JS. </p>
+						<p>Has all the mapping features most developers ever need.</p>
+						<p>Can be extended with <a href="http://leafletjs.com/plugins.html">Plugins</a></p>
+						<p>Well <a href="http://leafletjs.com/reference-1.2.0.html">documented</a></p>
 					</section>
 					<section>
-						<p>What Leaflet does not do:</p>
-						<p>Provide any data for you!</p>
-						<p>Provide the basemap</p>
-						<p>GIS</p>
-						<p>Leaflet is a framework </p>
+						<h1>What Leaflet does not do:</h1>
+						<p>Provide data for you.</p>
+						<p>Provide the basemap.</p>
+						<p>Its not GIS</p>
+						<h2 class="fragment fade-in">Leaflet is a framework </h2>
 					</section>
 					<section>
-						<h1>Examples</h1>
+						<h1>Some examples</h1>
+					</section>
+					<section>
+						<h1>Gimme the code!</h1>
+						<p>Include in HTML head</p>
+						<pre><code data-trim >
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+						</code></pre>
+						<p>HTML body</p>
+						<pre><code data-trim > <div id="mapid"></div> </code></pre>
+						<p>CSS</p>
+						<pre><code data-trim data-noescape>#mapid { height: 180px; }</code></pre>
+					</section>
+					<section>
+						<h2>JavaScript</h2>
+						<pre><code data-trim data-noescape>
+var map = L.map('map').setView([51.505, -0.09], 13);
+
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+</code></pre>
 					</section>
 					<section>
 						<h1>What will we do?</h1>
 						<p>Add a <a href="http://leaflet-extras.github.io/leaflet-providers/preview/">Base Map</a></p>
 						<p>Adding markers, circles, polygons</p>
 						<p>Add custom data</p>
+						<iframe src="workshop/leaflet/index.html" style="width:100%; height:300px;"> </iframe> 
 					</section>
 				</section>
+				<!-- Presentation part 5 Let's get started! -->
+				<section>
+					<section>
+						<h1> Let's Map!</h1>
+						<p>Everything is on Github</p>
+					</section>
+					<section>
+						<h1>Github?!</h1>
+						<img src="https://media.giphy.com/media/TW6M5r0ncBHcQ/giphy.gif" height="200px">
+						<p>Used for code.</p>
+						<p>Version control.</p>
+						<p>Sharing.</p>
+						<p>Documentation.</p>
+					</section>
+					<section>
+					<h1>Problems or questions?</h1>
+						<p>Use the INTERNET!</p>
+						<p>Use the Leaflet documentation!</p>
+						<p>Ask me</p>
+					</section>
+					<section>
+						<h1>Be creative!</h1>
+						<div style="float: left; width: 50%">
+						<img src="https://media.giphy.com/media/3oEduXdm2gjnrsJBOo/giphy.gif">
+						</div>
+						<div style="float: right; width: 50%">
+						<p>There is more to find on the Internet</p>
+						<p>playing is learning</p>
+						<p>Do not keep yourself to the assignments!! </p>
+						</div>
+					</section>
+					<section> 
+						<table>
+							<tr>
+								<td> <h4> Presentation </h4> </td>
+								<td> <a href="http://bit.ly/2uF2IhL">http://bit.ly/2uF2IhL </a> </td>
+							</tr>
+							<tr>
+								<td> <h4> Workshop </h4> </td>
+								<td><a href="http://bit.ly/2viXRGF">http://bit.ly/2viXRGF</a></td>
+							</tr>
+						</table>
+						<h4> or </h4>
+						<h4><a  style=" text-transform: initial" href="https://github.com/NieneB/Webmapping_for_beginners">github.com/NieneB/webmapping_for_beginners</a></h4>
+					</section>
+				</section>
+
 				<!-- Presentation part 4 D3.js -->
 				<section>
 					<section>
@@ -336,6 +420,8 @@
 					</section>
 					<section>
 						<h1>Examples</h1>
+						<iframe src="workshop/d3/index.html" style="width:100%; height:300px;"> </iframe> 
+
 						<a href="https://github.com/mbostock/d3/wiki/Gallery"> gallery</a>
 					</section>
 					<section>
@@ -345,22 +431,7 @@
 						<p>Adding legends and graphs based on the same data</p>
 					</section>
 				</section>
-				<!-- Presentation part 5 Let's get started! -->
-				<section>
-					<section>
-						<h1> Let's get started!</h1>
-					</section>
-					<section>
-						<p>A lot of our building blocks are freely available online!</p>
-					</section>
-					<section> 
-						<p>This presentation</p>
-						<h1 style=" text-transform: initial"><a href=""></a></h1>
-						<a href="https://NieneB.github.io/Webmapping_for_beginners/">https://NieneB.github.io/Webmapping_for_beginners/</a>
-						<p>The workshop:</p>
-						<a href="https://github.com/NieneB/Webmapping_for_beginners/wiki">https://github.com/NieneB/Webmapping_for_beginners/wiki</a>
-					</section>
-				</section>
+			
 			</div>
 		</div>
 		<script src="lib/js/head.min.js"></script>
