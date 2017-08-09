@@ -45,7 +45,7 @@ function makeMap(json){
 }
 
 //Load in GeoJSON data for World Map
-d3.json("../../data/world.geojson", function(json) {
+d3.json("../data/world.geojson", function(json) {
 	makeMap(json);
 }); 
 
@@ -242,7 +242,7 @@ function handleMouseOut(d, i) {
 
 
 //Load in GeoJSON data for Bigfoot Points and make all elements of the page
-d3.json("../../data/All_BFRO_Reports_points.geojson", function(error,data){
+d3.json("../data/All_BFRO_Reports_points.geojson", function(error,data){
 	makeLegend(data);
 	makePoints(data);
 	makeGraph(data);
