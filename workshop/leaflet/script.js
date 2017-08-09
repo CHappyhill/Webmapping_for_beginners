@@ -85,28 +85,31 @@ pointToLayer: function (geoJsonPoint, latlng) {
 }
 }).addTo(map);
 
-// new Http Request
-var xhttp = new XMLHttpRequest();
+geojson.addData("../../data/All_BFRO_Reports_points.geojson");
 
-// set the request method: get the data
-xhttp.open('GET', encodeURI("All_BFRO_Reports_points.geojson" ));
 
-//specify what must be done with the geojson data to the layer when request is succesfull
-xhttp.onload = function() {
-	if (xhttp.readyState === 4) {
-			// add the json data to the geojson layer we created before!
-			geojson.addData(JSON.parse(xhttp.responseText));
-		} else {
-			alert('Request failed.  Returned status of ' + xhttp.readyState );
-		}
-};
+// // new Http Request
+// var xhttp = new XMLHttpRequest();
+
+// // set the request method: get the data
+// xhttp.open('GET', encodeURI("All_BFRO_Reports_points.geojson" ));
+
+// //specify what must be done with the geojson data to the layer when request is succesfull
+// xhttp.onload = function() {
+// 	if (xhttp.readyState === 4) {
+// 			// add the json data to the geojson layer we created before!
+// 			geojson.addData(JSON.parse(xhttp.responseText));
+// 		} else {
+// 			alert('Request failed.  Returned status of ' + xhttp.readyState );
+// 		}
+// };
 
 // // send the request
 // xhttp.send();
 
 //Jquery method
 // $.getJSON("../../data/All_BFRO_Reports_points.geojson", function(data) {
-// geojson.addData(data);
+// 
 // });
 
 
