@@ -74,7 +74,7 @@ var polygon = L.polygon([
 // };
 
 var bigfootIcon = L.icon({
-    iconUrl: 'workshop/big_foot_orange.png',
+    iconUrl: '../big_foot_orange.png',
     iconSize:     [15, 25], // size of the icon
 });
 
@@ -104,8 +104,8 @@ pointToLayer: function (geoJsonPoint, latlng) {
 // // send the request
 // xhttp.send();
 
-Jquery method
-$.getJSON("/workshop/data/All_BFRO_Reports_points.geojson", function(data) {
+//Jquery method
+$.getJSON("../workshop/data/All_BFRO_Reports_points.geojson", function(data) {
 
 });
 
