@@ -1,9 +1,8 @@
 ## About the BFRO bigfoot/sasquatch sightings dataset
 
+The [BFRO](https://www.bfro.net/) is the only scientific research organization exploring the bigfoot mystery. Data is collected from 1995 till now. 
 
-BFRO  is the only scientific research organization exploring the bigfoot/sasquatch mystery. The data comes from the BFRO Database. Data is collected from 1995 till now. 
-This dataset was downloaded on 3 may 2017. 
-Pre-processed to a geojson file with only class A and class B classicication sightings.
+We prepared a dataset for you that contains the viewing sites of bigfoot! The dataset is downloaded on the 3th of May 2017 from the BFRO database.  We pre-processed their data and exported it to a geojson file. If you want to know more about the Database history or the classification of the data have a look at the [BRFO documentation](https://www.bfro.net/GDB/classify.asp).
 
 The classification:
 
