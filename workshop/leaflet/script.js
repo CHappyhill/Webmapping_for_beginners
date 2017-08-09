@@ -36,8 +36,8 @@ var harvard = L.marker([42.376979, -71.116617]);
 harvard.addTo(map);
 
 //Add pop-ups
-var popup = "The Harpoon Brewery.";
-brewery.bindPopup(popup);
+// var popup = "The Harpoon Brewery.";
+// brewery.bindPopup(popup);
 
 var popup1 = "Do you sleep in the SeaPort Hotel?";
 hotel.bindPopup(popup1)
@@ -109,3 +109,16 @@ $.getJSON("../../data/All_BFRO_Reports_points.geojson", function(data) {
 geojson.addData(data);
 });
 
+
+
+
+var popup = L.popup();
+
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
+}
+
+map.on('click', onMapClick);
