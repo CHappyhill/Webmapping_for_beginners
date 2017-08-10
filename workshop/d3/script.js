@@ -1,6 +1,7 @@
 //Width and height
 var w = window.innerWidth
 var h = window.innerHeight
+
 //Define map projection
 var projection = d3.geoMercator()
 	.center([ -100, 45 ])
@@ -40,12 +41,23 @@ function makeMap(json){
 		.enter()
 		.append("path")
 		.attr("d", path)
-		.style("fill", "#313030")
-		.style("stroke", "#5a5959");
+		.style("fill", function(d){
+			return color(d.properties.mapcolor7)
+		})
+		.style("stroke", "#5a5959")
+		.on("mouseover", handleMouseOver)
+		.on("mouseout", handleMouseOut)
 }
+
+var color = d3.scaleThreshold()
+    .domain(d3.range(0, 8))
+    .range(d3.schemeBlues[8]);
+
+
 
 //Load in GeoJSON data for World Map
 d3.json("../data/world.geojson", function(json) {
+	console.log(json.features[1])
 	makeMap(json);
 }); 
 
@@ -207,50 +219,43 @@ function makeGraph(data){
 
 
 
-// Create Event Handlers for mouse
-function handleMouseOver(d, i) {  // Add interactivity
-// Use D3 to select element, change color and size
-	d3.select(this)
-		.style("fill", "orange")
-		.attr("r", 15);
-	
 
-	// // Specify where to put label of text
-	// svg.append("text").attr({
-	//    id: "t" + d.x + "-" + d.y + "-" + i,  // Create an id for text so we can select it later for removing on mouseout
-	//     x: function() { return xScale(d.x) - 30; },
-	//     y: function() { return yScale(d.y) - 15; }
-	// })
-	// .text(function() {
-	//   return [d.x, d.y];  // Value of the text
-	// });
-};
 
-function handleMouseOut(d, i) {
-// Use D3 to select element, change color back to normal
-	d3.select(this)
-		.style("fill", function(d){
-			if (d.properties.styleUrl == "#a") {return "red"}
-			else if (d.properties.styleUrl == "#b") {return "blue"}
-			else { return "yellow"}
-		})
-		.attr("r", 3);
+// function handleMouseOut(d, i) {
+// // Use D3 to select element, change color back to normal
+// 	d3.select(this)
+// 		.style("fill", function(d){
+// 			if (d.properties.styleUrl == "#a") {return "red"}
+// 			else if (d.properties.styleUrl == "#b") {return "blue"}
+// 			else { return "yellow"}
+// 		})
+// 		.attr("r", 3);
 
-	// // Select text by id and then remove
-	// d3.select("#t" + d.x + "-" + d.y + "-" + i).remove();  // Remove text location
-};
+// };
 
 
 //Load in GeoJSON data for Bigfoot Points and make all elements of the page
 d3.json("../data/All_BFRO_Reports_points.geojson", function(error,data){
 	makeLegend(data);
 	makePoints(data);
-	makeGraph(data);
+	// makeGraph(data);
 });
 
 
+// Create Event Handlers for mouse
+function handleMouseOver() {  // Add interactivity
+// Use D3 to select element, change color and size
+	d3.select(this)
+		.style("fill", "orange")
+		.attr("r", 15);
+	
+};
 
-
+function handleMouseOut(d, i) {
+// Use D3 to select element, change color back to normal
+  d3.select(this)
+    .style("fill", "#313030")
+};
 
 
 
