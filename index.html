@@ -146,11 +146,22 @@
 				<section>
 					<section>
 						<h1>What is a web map?</h1>
-						<p>Analogue paper - Digital maps - Web Maps</p>
-						<p>[Data, tiles, styles and servers.] </p>
-						<p>View in a browser, scroll, pan, zoom. </p>
+						<p><i>Analogue paper maps</i></p>
+						<table>
+							<tr>
+								<th> Digital maps</th> <th> VS</th><th>Web Maps</th>
+							</tr>
+							<tr> 
+								<td>  Data </td> <td></td><td> Tiles, styles and servers </td>
+							</tr>
+							<tr> 
+								<td> On the computer </td> <td></td><td> View in a browser </td>
+							</tr>
+							<tr>
+								<td>Calculate, analyze</td><td></td><td>scroll, pan, zoom</td>
+							</tr>
+						</table>
 						<img src="img/webmapping_4_steps.jpg">
-						<p>Examples:</p>
 					</section>
 					<section data-background="img/osm.png">
 						<h2><a href="openstreetmap.org">openstreetmap.org</a></h2>
@@ -168,7 +179,7 @@
 						<img src="img/mapquest.jpeg" style="float:right; width:50%">
 					</section>
 					<section>
-						<p>But really slow to load..</p>
+						<h4>But really slow to load..</h4>
 						<p>in 2004 Endoxon found a way for quick online mapping! <a href="http://map.search.ch">map.search.ch</a></p>
 						<p>2005 Google Maps took over!</p>
 						<p> The solution?</p>
@@ -221,19 +232,35 @@
 						</div>
 					</section>
 					<section>
-						<h2>Building blocks</h2>
-							<p>Data</p>
-							<p>Styles</p>
-							<p>Tiles</p>
-							<p>Layers</p>
-							<p>Servers</p>
+						<p>There is also such a thing as Vector tiles!</p>
+						<p>But today only about <h4>Raster tiles</h4></p>
 					</section>
 					<section>
-						<img src="img/anatomy-of-a-web-map.png">
+					<h1>Summary</h1>
+					<h2>Web Map Building blocks</h2>
+					<div style="float: left; width: 50%">
+							<p>Data, styled, tiles, server:</p>
+							<p><b>Base Layer</b></p>
+							<p>Additional Data:</p>
+							<p><b>Vector Layers</b></p>
+							<p>Interface and Interaction</p>
+							<p><i>Zoom, panning, clicking etc. </i></p>
+					</div>
+					<div style="float: left; width: 50%">
+						<img src="img/tile_creation.png" >
+					</div>
 					</section>
+				
 					<section>
 						<h2>How to bring this all together?</h2>
-						<h1 class="fragment fade-in"> JavaScript!</h1>
+						<div class="fragment fade-in">
+							<h1> JavaScript!</h1>
+							<p>Puts it all together,</p>
+							<p>Tiles, content, interaction</p>
+						</div>
+					</section>
+						<section>
+						<img src="img/web_map_building_blocks.png" height=" 50%">
 					</section>
 				</section>
 				<!-- Presentation part 2 Web page -->
@@ -257,7 +284,7 @@
 				<section>
 					<section>
 						<h1>a Map is a lot! </h1>
-						<p>Data + style = map tiles / Background map</p>
+						<p>Tiles for Base layer</p>
 						<p>Data layers, polygons, lines & points</p>
 						<p>Functionality: zoom, pan, popups, markers, routes, etc. </p>
 						<p>Interactivity</p>
@@ -424,29 +451,29 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 					<section>
 						<h1>D3.js</h1>
 						<a href="https://d3js.org/"><img src="img/d3-logo.png"></a>
+						<p>Data Driven Documents</p>
 						<p>A JavaScript library for manipulating documents based on data</p>
 						<blockquote>D3 helps you bring data to life using HTML, SVG, and CSS.</blockquote>
 						<code></code>
 					</section>
 					<section>
 						<p>Developed by <a href="https://bost.ocks.org/mike/">Mike Bostock</a></p>
-						<p>Data Driven Documents</p>
-						<p>SVG mathematical representation of images that scale and are amenable to animation and interaction. </p>
+						<p>Allows you to bind data to the DOM and apply data-driven transformations to the document</p>
+						<p>HTML, SVG, and CSS</p>
+						<p>Fast</p>
+						<p>supports large datasets</p>
+						<p>Dynamic, interaction, animation</p>
 					</section>
 					<section>
 						<h1>SVG</h1>
 						<div style="float: left; width: 50%">
-						<p>text-based </p>
-						<p> vector </p>
-						<p>two-dimensional graphics. </p>
+						<p>text-based, mathematical representation of an image </p>
+						<p>Vector Graphics</p>
+						<p>can be searched, indexed, scripted, and compressed!! </p>
 						</div>
 						<div style="float: right; width: 50%">
 						<img src="https://raw.githubusercontent.com/wiki/NieneB/Webmapping_for_beginners/img/Bitmap_VS_SVG.png">
 						</div>
-						<p>can be searched, indexed, scripted, and compressed!! </p>
-					</section>
-					<section>
-						<p>Vector Graphics</p>
 						<p>Charts (pie, line), Tables, Maps, Networks, animation & interactivity</p>
 					</section>
 					<section>
@@ -456,15 +483,44 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 						<p></p>
 					</section>
 					<section>
-						<p>selecting elements</p>
-						<p>Class, Id, Type</p>
-						<p>Styles: transperency, color, size, borders</p>
-						<p>Attributes: classes, id, interactive behavior</p>
-						<p>Properties: state, true/false</p>
+					<h1>Gimme the code!</h1>
+						<pre><code><script src="https://d3js.org/d3.v4.min.js"></script></code></pre>
+					</section>
+					<section>
+						<h1>How does it work?</h1>
+						<h2>Selections</h2>
+						<p>Selecting elements by : </p>
+						<p>[.Class #Id Type]</p>
+						<pre><code>
+d3.selectAll("p").style("color", "white");
+d3.select("body").style("background-color", "black");
+						</code></pre>
+					</section>
+					<section>
+					<h2>Data </h2>
+						<p><b>Styles:</b> transparency, color, size, borders</p>
+						<pre><code>d3.selectAll("p").style("color", "white");</code></pre>
+						<p><b>Attributes:</b> classes, id, interactive behavior</p>
+						<pre><code>d3.selectAll(".small").atr("class", "big");</code></pre>
+						<p><b>Properties:</b> state, true/false</p>
+						<p><b>Transitions:</b> animation, delay, transformation</p>
+
+					</section>
+					<section>
+						<h1>Dynamic properties</h1>
+						<pre><code>
+d3.selectAll("p").style("color", function() {
+	return "hsl(" + Math.random() * 360 + ",100%,50%)";
+});</code></pre>
+<h1>Transition</h1>
+<pre><code>
+d3.selectAll("circle").transition()
+	.duration(750)
+	.delay(function(d, i) { return i * 10; })
+	.attr("r", function(d) { return Math.sqrt(d * scale); });</code></pre>
 					</section>
 					<section>
 						<h1>Examples</h1>
-
 						<a href="https://github.com/mbostock/d3/wiki/Gallery"> gallery</a>
 					</section>
 					<section>
@@ -546,6 +602,8 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 						<p style="font-size: 10pt;">Mike Bostock</p>
 						<p style="font-size: 10pt;">Giphy</p>
 						<p style="font-size: 10pt;">BFRO</p>
+						<p style="font-size: 10pt;">Alan McConchie</p>
+						<p style="font-size: 10pt;">Beth Schechter</p>
 						</div>
 					</section>
 				</section>
