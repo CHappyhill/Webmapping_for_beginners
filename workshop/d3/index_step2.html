@@ -12,6 +12,14 @@
       h1 { 
         color: #ffffff
       }
+
+
+.legend{
+  position: fixed;
+  left: 10px;
+  top: 100px;
+}
+
     </style>
   </head>
   <body>
@@ -40,6 +48,7 @@
 
       //Load in GeoJSON data
       d3.json("../data/world.geojson", function(json) {
+        
         //Bind data and create one path per GeoJSON feature
         layerWorld.selectAll("path")
            .data(json.features)
@@ -71,9 +80,6 @@
           .domain(d3.range(0, 8))
           .range(d3.schemeBlues[8]);
 
-
-
-
         // create a new SVG group element
         var layerYeti = svg.append('g');
 
@@ -98,7 +104,48 @@
   else { return "yellow"}
 })
             .style("opacity", 0.75);
+
+
+
+        //Create Legend
+var legend = d3.select("body")
+  .append("svg")
+  .attr("class", "legend")
+  .attr("width", 200)
+  .attr("height", 300);
+
+  var unique_values = d3.map(data.features, function(d){return d.properties.styleUrl;}).keys();
+console.log(unique_values);
+
+legend.selectAll("circle")
+  .data(unique_values)
+  .enter()
+  .append("circle")
+  .attr("class", "cl")
+  .attr("cx", 10)
+  .attr("cy", function(d, i) { return i * 30 + 15;})
+  .attr("r", 8)
+  .style("fill", function(d){
+    if (d == "#a") {return "red"}
+    else if (d == "#b") {return "blue"}
+    else { return "yellow"}
+  })
+  .style("opacity", 0.8);
+
+legend.selectAll("text")
+  .data(unique_values)
+  .enter()
+  .append("text")
+  .text(function(d){
+    return "class " + d 
+  })
+  .attr("x", 30 )
+  .attr("y", function(d, i) { return i * 30 + 20;})
+  .attr("fill", "#ffffff")
+  .style("text-align","left")
+  .style("font-size", "16px");
         });
+
     </script>
   </body>
 </html>
