@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Foss4G Boston, Making Maps with JavaScript</title>
+		<title>MGI, Making Maps with JavaScript</title>
 		<meta name="description" content="Presentation introducing JavaScript as a map-making tool.">
 		<meta name="author" content="Niene Boeijen">
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -26,10 +26,10 @@
 						<h3>By Niene Boeijen</h3>
 					</section>
 					<!-- Before we can start! -->
-					<section>
+					<!-- <section>
 					<h1>WIFI</h1>
 <!-- 						<img src="https://media.giphy.com/media/ihwuNjpbb2RBS/giphy.gif" width="200px">
- -->						<table>
+						<table>
 							<tr>
 								<td> <p>Network:</p> </td>
 								<td> <p>Harvard University</p> </td>
@@ -54,7 +54,7 @@
 						<p>Lunch will not be provided</p>
 						<p>We are guests here, keep noise levels down in the hallways</p>
 						<p>Photos or video will not be allowed</p>
-					</section>
+					</section> -->
 					<section>
 						<table>
 							<tr>
@@ -72,11 +72,11 @@
 				</section>
 				<!-- All about me me me ! -->
 				<section>
-					<section>
+<!-- 					<section>
 						<h1>Welcome!</h1>
 						<img src="img/rectangle_color_150_350.png">
 						<i><p>Workshop made for <a href="http://2017.foss4g.org/">Foss4G Boston</a>, Aug 2017</p></i>
-					</section>
+					</section> -->
 					<section>
 						<h1>Niene Boeijen </h1>
 						<div style="float:left; width:50%;"> 
@@ -104,16 +104,36 @@
 								<p>Utrecht, The Netherlands</p>
 						</div>
 					</section>
+					<section data-background="img/webmapper.gif">
+						<div style="float: right; width: 70%; background-color:rgba(255,255,255,0.8);"> 
+						<p>Tools we use:</p>
+						<p>QGIS</p>
+						<p>PostgreSQL</p>
+						<p>GeoServer, MapServer</p>
+						<p>JavaScript: Leaflet, OpenLayers, MapboxGL, D3</p>
+						<p>Ubuntu, Linux command line tools</p>
+						<h1>Internships! Yes! </h1>
+						</div>
+					</section>
 					<section data-background=img/maptime_chapters.png data-background-size=100%>
 						<h1>Maptime</h1>
 						<p>Time for making maps!</p>
 						<p>Maptime is hands on!</p>
+						
 						<div style="float: right; width: 40%;" >
 						<img class="fragment fade-in"  src="https://secure.meetupstatic.com/photos/event/9/1/0/0/highres_459997120.jpeg">
 						</div>
 						<div style="float: left; width: 60%;" >
 						<img class="fragment fade-in"  src="https://secure.meetupstatic.com/photos/event/c/5/b/2/highres_458930610.jpeg">
 						</div>
+					</section>
+					<section>
+						<a href="https://www.meetup.com/Maptime-AMS/events/240389622/"><img src="img/maptimeAMS.png" height="200px"></a>
+						<h4>Maptime Amsterdam 10 min walk from CS</h4>
+						<p>Next: 27 sept QGIS workshop!</p>
+						<a href="https://www.meetup.com/Maptime030-Utrecht/"><img src="img/Utrecht_Front.png" height="200px"></a>
+						<h4>Maptime Utrecht 5 min walk from CS</h4>
+						<p>Next: TBA October </p>
 					</section>
 				</section>
 					<!--Programme info -->
@@ -145,7 +165,7 @@
 							</tr>
 							
 							<tr> 
-								<td colspan="2" align="center"> <b> Break! @ 10AM</b></td>
+								<td colspan="2" align="center"> <b> Break! </b></td>
 							</tr>
 							<tr> 
 								<td> D3.js</td>
@@ -241,6 +261,10 @@
 						<img src="img/tiles.gif">
 						</div>
 					</section>
+<!-- 					<section>
+						<h4>Today: </h4>
+						<p> We use Tiles already provided on the internet!</p>
+					</section> -->
 					<section>
 						<h1>Layers!</h1>
 						<div style="float: left; width: 50%;">
@@ -254,10 +278,10 @@
 						<img src="img/vector_types.png" width="500px">
 						</div>
 					</section>
-					<section>
+<!-- 					<section>
 						<p>There is also such a thing as Vector tiles!</p>
 						<p>But today only about <h4>Raster tiles</h4></p>
-					</section>
+					</section> -->
 					<section>
 					<h1>Summary</h1>
 					<h2>Web Map Building blocks</h2>
@@ -397,6 +421,16 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 						<p>Adding markers, circles, polygons</p>
 						<p>Add custom data</p>
 						<iframe src="workshop/leaflet/index.html" style="width:100%; height:300px;"> </iframe> 
+					</section>
+					<section>
+						<h4> Base map = tiles already on the internet</h4>
+						<h4>Custom data : Feel free to use your own!</h4>
+						<h1>NOTE:</h1>
+						<p>Not to big datasets</p>
+						<p>Export to GeoJSON</p>
+						<p>Remove any not used attributes first!</p>
+						<p>Points, Polygons or Lines? </p>
+						<p>Attribute names are crucial! simple, short, no spaces or symbols</p>
 					</section>
 				</section>
 				<!-- Presentation part 5 Let's get started! -->
